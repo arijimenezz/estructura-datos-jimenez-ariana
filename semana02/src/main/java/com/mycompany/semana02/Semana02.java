@@ -38,7 +38,7 @@ public class Semana02 {
              //Caso base: cuando n es 1
              return 1;
          } else {
-             return n * factorial(n-1); //Llamada recursiva
+             return n * factorial(n-1); //Llamada recursiva cuando se llama de nuevo al metodo
          }
          
          }

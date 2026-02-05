@@ -28,14 +28,23 @@ public class Practica {
             return lista[index] + sumaRecursiva(lista, index + 1);
         }
     }
-    
-    
-    
-   
-      
-                
-            
-        
-    
     //encontrar numero maximo 
+    public int encontrarMaximo(int[] lista){
+        int maximo=lista[0];
+        for(int i=0; i<lista.length; i++){
+        if(lista[i]>maximo){
+            maximo=lista[i];
+        }   
+        
+        }
+         return maximo;
+    }
+    public int encontrarMaxR(int[]lista, int index){
+        if(index==lista.length){
+            return 0;
+        } else {
+           return lista [index] + encontrarMaxR(lista, index+1);
+        }
+    }
+    
 }

@@ -23,7 +23,9 @@ public class Main {
         
         Practica practica = new Practica();
         int[] miOtraLista ={2,5,3,7,2};
-        System.out.println(practica.sumaIterativa(miOtraLista));
+        //System.out.println(practica.encontrarMaximo(miOtraLista));
+        System.out.println(practica.encontrarMaxR(miOtraLista,0));
+        //System.out.println(practica.sumaIterativa(miOtraLista));
         //System.out.println(practica.sumaRecursiva(miOtraLista,0));
         
         
@@ -38,7 +40,7 @@ public class Main {
             return 1+ contarElementos(lista, index +1);//llamada recursiva
         }
         }
-    
+   
         
     
 }

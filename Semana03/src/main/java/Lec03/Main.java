@@ -24,7 +24,7 @@ public class Main {
         Practica practica = new Practica();
         int[] miOtraLista ={2,5,3,7,2};
         //System.out.println(practica.encontrarMaximo(miOtraLista));
-        System.out.println(practica.encontrarMaxR(miOtraLista,0));
+        System.out.println(practica.encontrarMaxR(miOtraLista,0,0));
         //System.out.println(practica.sumaIterativa(miOtraLista));
         //System.out.println(practica.sumaRecursiva(miOtraLista,0));
         

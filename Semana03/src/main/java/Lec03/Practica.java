@@ -39,12 +39,18 @@ public class Practica {
         }
          return maximo;
     }
-    public int encontrarMaxR(int[]lista, int index){
-        if(index==lista.length){
-            return 0;
+    //Ejemplo del PROFE // Diferencia de lo que hice, es crear el parametro max no como una variable local
+    public int encontrarMaxR(int[]lista, int index, int max){
+        if(index<lista.length){
+            if(lista[index]> max){
+            max = lista[index];
+            }
+            return encontrarMaxR(lista, index+1, max);
         } else {
-           return lista [index] + encontrarMaxR(lista, index+1);
+            return max;
         }
     }
+    
+    
     
 }

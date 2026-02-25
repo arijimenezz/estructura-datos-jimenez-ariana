@@ -12,6 +12,7 @@ public class Semana06 {
 
     public static void main(String[] args) {
         try{
+            
             Cola cola = new Cola();
             cola.encolar(10);
             cola.encolar(20);

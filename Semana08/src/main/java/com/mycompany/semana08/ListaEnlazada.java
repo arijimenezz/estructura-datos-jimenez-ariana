@@ -31,7 +31,6 @@ public class ListaEnlazada {
                 actual = actual.getSiguiente();
             }
             actual.setSiguiente(nuevo);
-            actual.setSiguiente(nuevo);
         }
     }
     public void eliminarNodo(int valor){

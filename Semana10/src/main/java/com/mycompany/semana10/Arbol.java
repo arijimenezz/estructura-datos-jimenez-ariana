@@ -4,11 +4,13 @@
  */
 package com.mycompany.semana10;
 
+import com.mycompany.semana10.Nodo;
+
 /**
  *
  * @author jimen
  */
-public class Arbol {
+public class Arbol { // Guarda por jerarquias 
     private Nodo raiz;
     
     public Arbol(){
@@ -108,5 +110,29 @@ public class Arbol {
         }
         return nodo;
     }
+    
+    public int obtenerNivel(Nodo raiz, int valor, int nivel){ //Busqueda en anchura
+        if(raiz == null){
+            return -1;
+        }
+        if(raiz.getDato() == valor){
+            return nivel;
+        }
+        int nivelIzq = obtenerNivel(raiz.getIzquierda(), valor, nivel +1);
+        if(nivelIzq != -1){
+            return nivelIzq;
+        }
+        return obtenerNivel(raiz.getDerecha(), valor, nivel + 1);
+    }
+    
+    public int obtenerAltura(Nodo raiz){
+        if(raiz == null){
+            return -1; 
+    }
+    int alturaIzq = obtenerAltura(raiz.getIzquierda());
+    int alturaDer = obtenerAltura(raiz.getDerecha());
+    return Math.max(alturaIzq, alturaDer) + 1; //max de dos enteros
+    }
+    
 
 }
